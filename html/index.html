@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>脑功能解码可视化分析平台</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8" />
+	<link href="http://cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/default.css">
+	<link href="css/component.css" rel="stylesheet" type="text/css" />
+	<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="css/fileinput.css" media="all" rel="stylesheet" type="text/css" />
+
+	<style>
+			.test{
+					float: left;
+					width: 25%;
+					box-sizing: border-box;
+					background-color: #000000;
+					padding: 10px;
+					min-width: 150px;
+			}
+
+			.container1{
+					width: 100%;
+					background-color: #000000;
+			}
+
+			@media (max-width:615px ) {
+					.test{
+							float: left;
+							width: 33%;
+							box-sizing: border-box;
+							padding: 10px;
+							min-width: 150px;
+					}
+			}
+
+			@media (max-width:465px ) {
+					.test{
+							float: left;
+							width: 50%;
+							box-sizing: border-box;
+							padding: 10px;
+							min-width: 150px;
+					}
+			}
+
+			@media (max-width:315px ) {
+					.test{
+							float: left;
+							width: 100%;
+							box-sizing: border-box;
+							padding: 10px;
+
+					}
+            }
+
+	</style>
+</head>
+
+<body id="firefly";>
+
+	<!--features-->
+	<div id="feature" class="features">
+		<div class="container">
+			<div class="feature-info text-center">
+				<h3>脑功能解码可视化分析平台</h3>
+				<p>在本作品中，我们提出了一种基于深度学习的可用于直接解码和识别功能性脑成像数据的方法。本作品使用来自1000余人的大规模数据集，利用神经网络在提取高维特征方面的优异性能进行了多次实验，表现良好，实现了利用3D fMRI 信号解码人类大脑的运作机制。</p>
+			</div>
+			<div class="feature-grids">
+				<div class="col-md-6 feature-sec">
+					<div class="feature-grid grid1">
+						<font size=6px color=#00E8F3> 静  息 <font size=5px color=#00E8F3>Static-state</font></font>
+						<p>人类在清醒、闭眼、放松状态下的BOLD信号，被用于检测大脑结构或活动的异常。受试者在此期间静躺，不思考任何事情。</p>
+					</div>
+					<div class="feature-grid grid2">
+						<font size=6px color=#00E8F3> 嘴  唇 <font size=5px color=#00E8F3>Lips</font></font>
+						<p>判断对应大脑激活热区区域的活动情况，可判断嘴唇是否收到刺激。</p><br/>
+					</div>
+				</div>
+				<div class="col-md-6 feature-sec">
+					<div class="feature-grid grid3">
+						<font size=6px color=#00E8F3> 手  指 <font size=5px color=#00E8F3>Figers</font></font>
+						<p>判断对应大脑激活热区区域的活动情况，可判断手指是否收到刺激。</p><br/>
+					</div>
+					<div class="feature-grid grid4">
+						<font size=6px color=#00E8F3> 虎  口 <font size=5px color=#00E8F3>Hu-kou</font></font>
+						<p>判断对应大脑激活热区区域的活动情况，可判断虎口是否收到刺激。</p><br/>
+					</div>
+				</div>
+				<div class="col-md-6 feature-sec">
+					<div class="feature-grid grid5">
+						<font size=6px color=#00E8F3> 情  感 <font size=5px color=#00E8F3>Emotion</font></font>
+						<p>给予多个表情图片任务，判断该图片中任务情绪处于生气或者害怕。</p><br/>
+					</div>
+					<div class="feature-grid grid6">
+						<font size=6px color=#00E8F3> 赌  博 <font size=5px color=#00E8F3>Gambling</font></font>
+						<p>受试者玩纸牌猜游戏，在游戏中，他们被要求猜测神秘纸牌上的数字（以“？”表示），以便赢钱或赔钱。</p><br/>
+					</div>
+				</div>
+				<div class="col-md-6 feature-sec">
+					<div class="feature-grid grid7">
+						<font size=6px color=#00E8F3> 语  言 <font size=5px color=#00E8F3>Language</font></font>
+						<p>通过给受试者讲故事或者简单的数学题(加减法)判断其大脑状态。</p><br/>
+					</div>
+					<div class="feature-grid grid8">
+						<font size=6px color=#00E8F3> 运  动 <font size=5px color=#00E8F3>Motor</font></font>
+						<p>向参与者展示视觉提示，要求他们敲击左手指或右手指，挤压左脚或右脚趾或移动舌头以绘制运动区域。</p><br/>
+					</div>
+				</div>
+				<div class="col-md-6 feature-sec">
+					<div class="feature-grid grid11">
+						<font size=6px color=#00E8F3> 工作记忆 <font size=5px color=#00E8F3>Working Memory(WM)</font></font>
+						<p>向受试者展示一些试验块，这些试验块包括位置，工具，面部和身体部位的图片。在每次运行中，有½个块使用2-back工作记忆任务，而½使用0-back工作记忆。</p><br/>
+					</div>
+					<div class="feature-grid grid9">
+						<font size=6px color=#00E8F3> 关  系 <font size=5px color=#00E8F3>Relation </font></font>
+						<p> 向受试者展示两对对象，分别在屏幕顶部和底部，以及屏幕中间出现的单词(“形状” 或 “纹理”)。受试者需要确定底部的对象和顶部的哪个对象在形状或纹理上相同。</p><br/>
+					</div>
+				</div>
+				<div class="col-md-6 feature-sec">
+					<div class="feature-grid grid10">
+						<font size=6px color=#00E8F3> 交  互 <font size=5px color=#00E8F3>Social</font></font>
+						<p>向受试者展示 20s 短视频片段，正方形、圆形、三角形以某种方式交互或随机移动。随后需要作出选择：- Interaction. (Social)- Not sure.- No interaction. (Random)</p><br/><br/>
+					</div>
+					<div class="feature-grid grid1">
+						<font size=6px color=#00E8F3> 敬请期待 <font size=5px color=#00E8F3>Anticipate</font></font>
+						<p>更新ing...</p><br/><br/>
+					</div>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+        <div id = "load-box" class="loading" style="display:none">
+		    <div></div>
+	        <div></div>
+		    <div></div>
+		    <div></div>
+		    <div></div>
+	     </div>
+	</div>
+
+	<!-- 插入图片插件 -->
+	<script src="http://cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<script src="http://cdn.bootcss.com/jquery/1.11.0/jquery.min.js" type="text/javascript"></script>
+	<script>window.jQuery || document.write('<script src="js/jquery-1.11.0.min.js"><\/script>')</script>
+	<script src="js/fileinput.js" type="text/javascript"></script>
+	<script src="js/locales/zh.js" type="text/javascript"></script>
+	<script src='js/jquery.firefly-0.7.min.js'></script>
+
+	<style type="text/css">
+		* {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+		#box {
+			height: 300px;
+			width: 1100px;
+			margin-bottom: 70px;
+			background: #0f091c;
+			padding: 30px;
+		}
+	</style>
+
+	<div style="background-color:#0f091c;">
+		<div class="container kv-main">
+			<div id="box" style="background-color:#ccffff;border-radius:20px;">
+				<div class="feature-info text-center">
+					<h2>将医疗影像的压缩文件拖拽到这里，获取结果</h2>
+					<font size=3px>仅支持 31 张命名为阿拉伯数字'0'～'30'且大小为 128 x 128 的 '.dcm' 的医疗影像文件。</font><br/>
+					<font size=3px>请按照层序排序命名为'0'~'30'后压缩为 '.zip' 文件再上传。</font>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="feature" class="features">
+		<div class="container">
+			<div class="feature-info text-center">
+				<h3>ABOUT ME</h3>
+				<font size=4px color='white'>陕西科技大学&nbsp;&nbsp;&nbsp;电子信息与人工智能学院<br/><br/>指导老师：齐勇&nbsp;&nbsp;qiyong@sust.edu.cn<br/>
+					林华伟&nbsp;&nbsp;&nbsp;winsoullin@gmail.com<br/>李艳平&nbsp;&nbsp;&nbsp;1761708364@qq.com
+				</font>
+
+			</div>
+		</div>
+	</div>
+</body>
+
+<script type="text/javascript">
+	$.firefly({
+		color: '#fff',
+		minPixel: 1,
+		maxPixel: 3,
+		total: 165,
+		on: '#firefly',
+		borderRadius: 50
+	});
+</script>
+
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+
+    var dropBox = document.getElementById("load-box");
+
+	var box = document.getElementById('box');
+	box.ondragover=function(e){
+		e.preventDefault();
+	}
+	box.ondrop=function(e){
+		e.preventDefault();
+		var file = e.target.files?e.target.files[0]:e.dataTransfer.files[0];
+		var f = e.dataTransfer.files[0];
+		fileType = f.type;
+		fileSize = f.size;
+		reader = new FileReader();
+		var maxsize = 20480;
+		var reg = /(image)/;
+		if(fileType != 'application/x-zip-compressed'){
+			alert('不是正确的数据类型！');
+			return false;
+		}
+
+		if(fileSize>maxsize*1024){
+			alert('素材大于'+maxsize+'KB');
+			return false;
+		}
+		var fr = new FileReader();
+		fr.readAsDataURL(f);
+		fr.onload=function(e){
+            dropBox.style.display = "block";
+			var Url = 'images/zip.png';
+			box.innerHTML+='<img src="'+Url+'" alt="" width="120" height="120" style="margin:10px;">';
+		}
+		var form = new FormData();
+    	form.append("file", f);
+		$.ajax({
+			type:"post",
+			url:"upload.php",
+			data:form,
+			processData:false,
+			contentType:false,
+			success:function(data){
+                var ret = data;
+                if (ret == 'press'){
+				    window.location.href="hu-kou.html";
+                } else if (ret == 'figer') {
+				    window.location.href="figer.html";
+                } else if (ret == 'lips') {
+					window.location.href="lips.html";
+                } else if (ret =='static-state') {
+				    window.location.href="static-state.html";
+                } else if (ret == 'emotion') {
+				    window.location.href="emotion.html";
+                } else if (ret == 'language') {
+					window.location.href="Language.html";
+                } else if (ret =='gambling') {
+				    window.location.href="Gambling.html";
+                } else if (ret == 'motor') {
+				    window.location.href="Motor.html";
+                } else if (ret == 'wm') {
+					window.location.href="WM.html";
+                } else if (ret =='social') {
+				    window.location.href="Social.html";
+                } else if (ret =='relational') {
+				    window.location.href="relation.html";
+                } else {
+				    alert("未知错误！请联系作者");
+                    alert(ret);
+				}
+			}
+		});
+	}
+</script>
+</html>
