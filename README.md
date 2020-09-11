@@ -119,7 +119,7 @@ cuda 10.0
  
 v2020.05
 
-林华伟   winsoullin@gmail.com
+林华伟   huaweilin.cs@gmail.com
 
 李艳平   1761708364@qq.com
 
@@ -128,7 +128,7 @@ v2019.05
 
 曹静    onetwothreeamon@gmail.com
 
-林华伟   winsoullin@gmail.com
+林华伟   huaweilin.cs@gmail.com
 
 陈嘉树   1416228373@qq.com
 
